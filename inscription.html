@@ -77,6 +77,14 @@
             document.getElementById('inputPassword').value = generateChaine(getRandomArbitrary(8,13))
         }
 
+
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
         function getCookie(cname) {
             let name = cname + "=";
             let decodedCookie = decodeURIComponent(document.cookie);
@@ -97,8 +105,9 @@
             login = document.getElementById('staticEmail').value
             password = document.getElementById('authPassword').value
             if(password=="admin" && login=="admin"){
-                getCookie(login, password)
-                window.location.href="../dashboard.html"
+                setCookie('userConnecte', "1", 3)
+				// ou sessionStorage.setItem("user", login)
+                window.location.href="dashboad.html"
             }else{
                 alert("Login ou password est incorrect!")
             }

@@ -79,11 +79,11 @@
         }
 
         function checkCookie() {
-            let user = getCookie("username");
+            let user = getCookie("username"); // ou let user= sessionStorage.getItem("username")
             if (user == "admin") {
                 alert("Bonjour " + user);
             } else {
-                window.location.href="../inscription.html"
+                window.location.href="inscription.html"
             }
         }
 
