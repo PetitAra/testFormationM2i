@@ -98,7 +98,7 @@
             password = document.getElementById('authPassword').value
             if(password=="admin" && login=="admin"){
                 getCookie(login, password)
-                window.location.assign("../dashboard.html")
+                window.location.href="../dashboard.html"
             }else{
                 alert("Login ou password est incorrect!")
             }
