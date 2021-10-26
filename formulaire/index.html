@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title> Formulaire d'inscription </title>
     <link rel="stylesheet" href="style.css">
+    <script src="ajax.js"></script>
 </head>
 <body>
     <form methode="post" action="traitement.php">
@@ -31,18 +32,17 @@
             <td> <input placeholder="Votre adresse" type="text" id="adresse" name="adresse"></td>
         </tr>
         <tr>
-            <td><label for="pays" onchange="load()">Pays*:</label> </td>
+            <td><label for="pays" >Pays*:</label> </td>
             <td>
-                <select name="pays" id="pays">
-                <option value="france"> France</option>>
-                <option value="espagne"> Espagne</option>
+                <select name="pays" id="pays" onchange="load()">
+                <option value="fr"> France</option>>
                 <option value="us"> US </option>
                 </select>
             </td>
         </tr>
         <tr>
             <td><label for="ville">Ville*:</label></td>
-            <td>
+            <td id="cityContainer">
                 <select name="ville" id="ville">
                 <option value="Paris"> Paris</option>>
                 <option value="Madrid"> Madrid</option>
