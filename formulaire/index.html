@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <title> Formulaire d'inscription </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form methode="post" action="traitement.php">
+    <table>
+        <tr>
+            <td colspan="2" align="center">
+                <h1>Formulaire d'inscription</h1>
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="nom">Nom*:</label></td>
+            <td> <input placeholder="Votre nom" type="text" id="nom" name="nom"></td>
+        </tr>
+        <tr>
+            <td><label for="prenom">Prenom*:</label></td>
+            <td> <input placeholder="Votre prenom" type="text" id="prenom" name="prenom"></td>
+        </tr>
+        <tr>
+            <td><label for="date">Date de naissance*:</label></td>
+            <td></label><input placeholder="dd/mm/yyyy" type="text" id="date" name="date"></td>
+        </tr>
+        <tr>
+            <td><label for="adresse">Adresse*:</label></td>
+            <td> <input placeholder="Votre adresse" type="text" id="adresse" name="adresse"></td>
+        </tr>
+        <tr>
+            <td><label for="pays" onchange="load()">Pays*:</label> </td>
+            <td>
+                <select name="pays" id="pays">
+                <option value="france"> France</option>>
+                <option value="espagne"> Espagne</option>
+                <option value="us"> US </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="ville">Ville*:</label></td>
+            <td>
+                <select name="ville" id="ville">
+                <option value="Paris"> Paris</option>>
+                <option value="Madrid"> Madrid</option>
+                <option value="LA"> LA </option>
+                </select>
+            </td>        
+        </tr>
+    </table>
+    <br>
+    <input type="submit" value="Envoyer">
+    </form>
+</body>
